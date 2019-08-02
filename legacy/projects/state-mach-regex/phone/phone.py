@@ -8,13 +8,10 @@ line = input("Enter a phone number to validate or 'exit' when done. ")
 
 while line != "exit":
     # TODO Find matches
-
-    matches = re.search(regex, line)
-    
+    matches = re.search(regex, line)   
     # TODO If no match found, print that no number was found
-   
-   
-    
+    if not matches:
+        print('Not a valid phone number :(')
     # TODO Else, break number up into area code, prefix, and suffic
     
     
