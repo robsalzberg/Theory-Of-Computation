@@ -19,6 +19,7 @@ file.close()
 
 # TODO Set up regex
 
+regex = 'https?:\/\/[^\"\ \<\>\{\}\|\\\^\~\[\]\']+?\.[^\"\ \<\>\{\}\|\\\^\~\[\]\']+'
 
 # TODO Find links using regex, save in list called 'matches'
 
