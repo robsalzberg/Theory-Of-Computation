@@ -9,6 +9,7 @@ line = input("Enter a phone number to validate or 'exit' when done. ")
 while line != "exit":
     # TODO Find matches
 
+    matches = re.search(regex, line)
     
     # TODO If no match found, print that no number was found
    
