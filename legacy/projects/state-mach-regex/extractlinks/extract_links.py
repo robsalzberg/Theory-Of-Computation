@@ -1,11 +1,11 @@
-import re # module for processing regular expressions https://docs.python.org/3/library/re.html
+import re   # module for processing regular expressions https://docs.python.org/3/library/re.html
 import sys
 import csv
 if __name__ == '__main__':
-  # Exit if command line args entered incorrectly
-  if len(sys.argv) != 2:
-    print("usage: extract_links.py [input_file]")
-    sys.exit(0)
+    # Exit if command line args entered incorrectly
+    if len(sys.argv) != 2:
+        print("usage: extract_links.py [input_file]")
+        sys.exit(0)
 
 # Filename is 2nd command line arg
 filename = sys.argv[1]
@@ -14,7 +14,7 @@ filename = sys.argv[1]
 
 filedata = ''
 with open(filename) as file:
-  filedata = file.read()
+    filedata = file.read()
 file.close()
 
 # TODO Set up regex
@@ -23,9 +23,10 @@ regex = 'https?:\/\/[^\"\ \<\>\{\}\|\\\^\~\[\]\']+?\.[^\"\ \<\>\{\}\|\\\^\~\[\]\
 
 # TODO Find links using regex, save in list called 'matches'
 
+matches = re.findall(regex, filedata)
 
 # Check matches, print results
-# TODO Read in links from answers.txt (hint...this is a CSV file), 
+# TODO Read in links from answers.txt (hint...this is a CSV file)
 # save in list called 'answer_data'
 
 
